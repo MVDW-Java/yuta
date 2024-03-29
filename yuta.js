@@ -81,7 +81,7 @@ const importCSS = filename => obj => {
 
 const css = str => obj => {
     let provider = Gtk.CssProvider.new()
-    provider.loadFromData(str)
+    provider.loadFromData(str, 1)
     let ctx = Gtk.StyleContext
     ctx.addProviderForDisplay(Gdk.Display.getDefault(),provider, 1)
     return obj
